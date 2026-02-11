@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Introduction for enigma</title>
+
+    <link rel="stylesheet" href="../css/introduction.css">  
+    <script type = "text/javascript" src="../js/introduction.js"> </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+   
+</head>
+
+<body vlink = "red" alink="yellow" leftmargin="0%">
+
+    <header class="introduction" >
+
+        <nav class="menu">
+
+            <div>
+
+               <img src="../img/logo.png" alt="Logo alo" width="50px" style="margin-left: 10px;">
+
+            </div>
+
+            <div class="navigation_on_site "> <!--Не використала клас-->
+
+                 <ul class="first_ul">
+                   <li class="first_li"><a class="first_a" href="../html/index.html">Enigma</a></li>
+                   <li class="first_li"><a class="first_a" href="../html/principlework.html">Принцип роботи Enigma</a></li>
+                   <li class="first_li"><a class="first_a" href="../html/cryptanalysis.html">Криптоаналіз</a></li>
+                </ul>
+
+            </div>
+
+        </nav>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <div class="navigation_on_foto" >
+
+            <div>
+
+               <h1 style="color: #fff; font-size: 80px;">Enigma</h1>
+
+            </div>
+
+            <div class="navigation_by_site">
+
+                <ul> 
+                  <li class="two_li"><a class="two_a" href="#beginning">З чого це все почалось?</a></li>
+                  <li class="two_li"><a class="two_a" href="#leon">Що він зробив?</a></li>
+                  <li class="two_li"><a class="two_a" href="#firstattempts">Перші спроби</a></li>
+                  <li class="two_li"><a class="two_a" href="#Why">А навіщо це все?</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+            
+    </header>
+    
+    <main>
+        
+        <div class="btn-up btn-up_hide"></div>
+
+        <script>
+            const btnUp = {
+              el: document.querySelector('.btn-up'),
+              show() {
+                // видалим у кнопки класс btn-up_hide
+                this.el.classList.remove('btn-up_hide');
+              },
+              hide() {
+                // додамо до кнопки класс btn-up_hide
+                this.el.classList.add('btn-up_hide');
+              },
+              addEventListener() {
+                // при прогортуванні сторінки
+                window.addEventListener('scroll', () => {
+                  // розмір прогортування
+                  const scrollY = window.scrollY || document.documentElement.scrollTop;
+                  // якщо більше 400 то показуємо, якщо ні то ні
+                  scrollY > 400 ? this.show() : this.hide();
+                });
+                // при натисканні на кнопку .btn-up
+                document.querySelector('.btn-up').onclick = () => {
+                  // перенесемо на початок
+                  window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                  });
+                }
+              }
+            }
+            btnUp.addEventListener();
+        </script>
+
+        <div id="beginning">
+
+            <br>
+
+            <h2 style="text-align: center;">Те, з чого все почалось..</h2>
+
+            <div class="position_foto_and_text">
+
+               <div>
+
+                  <p> 
+                      У давнину шляхом приховування секретної інформації була звичайна писемність. Грамотних людей було дуже мало, тому освіченіші люди могли просто писати повідомлення на аркушах паперу — більшість людей просто не були здатні до їх прочитання. Але час минав, люди ставали дедалі грамотнішими і виникла потреба у складних системах шифрування.
+                      <br><br>
+                      Італія 15 століття, саме в цей час італійський архітектор <b>Леон Альберті</b> вигадує пристрій, який буде основою до всіх методів шифрування в майбутньому. 
+                  </p>
+
+               </div>
+
+                <div class="foto">
+
+                  <img id="imgItaly" onmouseover="over()" onmouseout="out()" src="..//img/LeonAlberty.jpg"  alt="Italy" width="50%" >
+                  
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="leon">
+
+            <br>
+
+            <h2 style="text-align: center;">Що з зробив Леон? </h2>
+
+    
+            <div class="text">
+                
+                <p>Його пристрій був досить простий, він взяв мідний диск і наніс по колу весь алфавіт своєї мови (латинь), аналогічно він зробив із другим диском меншого діаметра і поєднав їх, закріпивши в центрі. Цей пристрій отримав назву – <b>шифрувальний диск</b>.</p>
+        
+            </div>
+
+            <div style="display: flex; justify-content: center;">
+                <img src="../img/encryptiondisk1.png" alt="Encryption disk first" width="30%">
+                <img src="..//img/encryptiondisk2.png" alt="Encryption disk after" width="15%" height="20%">
+
+            </div>
+
+        </div>
+
+        <div >
+
+            <div>
+
+                <p style="font-size: 20px; display: flex; justify-content: center;">Диск більшого діаметра позначає літери тексту, який ми хочемо зашифрувати, другий диск, відповідно, букви зашифрованого тексту. </p>
+            
+            </div>
+
+            <div class="cipher">
+
+                <div class="box_with_line">
+                    <p>Прокрутивши внутрішній алфавіт на три позиції, ми отримаємо ніщо інакше як <b>шифр Цезаря</b>. Який був досить популярним десь 100 років до н.е.</p>
+                </div>
+
+                <div>
+                    <p>Якщо ж змінювати алфавіт для шифрування кожної наступної літери обертаючи диск(внутрішні) згідно з ключем, отримуємо - <b>шифр Віженера</b> .</p>
+                </div>
+
+            </div>
+
+            <div class="text">
+
+                <p>А додавши ще два таких шифрувальних дисків, проводів, клавіатуру, лампочку, батарею та додати до цього рівняння Артура Шербіуса, то в результаті ми отримуємо <b>Енігму – модель а</b>, яку в <b>1919 року</b> було запатентовано. </p>
+        
+            </div>
+
+        </div>
+
+        <div id="firstattempts">
+
+            <br> 
+
+            <h2 style="text-align: center;">Перші спроби..</h2>
+
+            <div class="text">
+
+                <p>
+                    Сам Артур розробив енігму для комерційної кореспонденції, особливо для банків і аж ніяк не для військових цілей. Але варто зазначити, що шифрувальна машина не користувалася значним попитом. Можливо, через те що ця роторна машина важила близько <b>50 кілограмів</b>, або, тому що коштувала вона на той час купу грошей, або через те що для розшифровки потрібно було купити іншу машину, щоб розшифрувати все ж таки то повідомлення. Причин не купувати її було достатньо і це розуміли всі і навіть Шербіус, тому модель с, була маленькою, як друкарська машинка і мала два режими ( шифрування \ дешифрування ). 
+                </p>
+
+            </div>
+
+            <div class="foto">
+                <img src="../img/Enigmaimproved.png" alt="Improved Enigma" width="15%" height="20%">
+            </div>
+
+            <div class="text">
+
+                <p>
+                    <b>1926 рік</b> - Перші німецькі шифратори більш компактних і дешевих моделей надійшли в армію і флот німеччини і тоді почалося вдосконалення енігми німецькими криптографами. 
+                    <br>
+                    Через два роки сухопутна армія отримала нову «енігму g», яка згодом активно використовувалася під час війни і різними німецькими службами та організаціями. Одним з головних відмінностей нового варіанту енігми від першої комерційної моделі було покращена якість шифрування.
+                    <br>
+                    Всього було випущено близько <b>100 тисяч</b> машин «енігма» , більшість з яких були знищені німцями для збереження секретності. 
+    
+                </p>
+
+            </div>
+
+            
+
+        </div>
+
+        <div id="Why">
+
+            <br>
+
+            <h2 style="text-align: center;">Навіщо це все?</h2>
+
+            <div class="position_foto_book">
+
+                <div>
+
+                    <p>
+                        Вдосконалювати тисячі разів енігму, яку і так ніхто не міг взламати на той час, може здатись нерозумно, але <b>1923 року</b> британський адмірал випустив <b>“Історію Першої світової війни”</b>, розповівши всьому світові про свою перевагу в тій війні завдяки зламу німецького коду. 
+                        <br><br>
+                        <b>1914</b> року російські війська, потопивши німецький крейсер “Магдебург”, виловили труп офіцера, що притискає до грудей журнал з військово-морським кодом. Знахідкою поділилися і з союзником Англією і німці втратили свою перевагу у вигляді неочікуваності.
+                        <br><br>
+                        Німецька військова еліта, переживши шок і проаналізувавши хід бойових дій після того випадку, зробила висновок, що подібного фатального витоку інформації надалі допускати не можна. А коли Гітлер почав готувати нову війну, шифрувальне диво увійшло в обов'язкову программу, енігма відразу ж стала затребуваною.
+                    </p>
+    
+                </div>
+    
+                <div class="foto_1">
+                    <img   src="../img/bookforfirstwar.jpg" alt="book for first war" width="80%" >
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+    <br><br>
+
+    <footer class="footer_me">
+
+        <div class="info_me" >
+            <h3>Звяжись зі мною!</h3>
+            <a href="#">Instagram</a>
+            <br>
+            <a href="#">Facebook</a>
+            <br>
+            <a href="#">Telegram</a>
+        </div>
+
+        <div class="img_me">
+            <img style="border-color: #fff; border-style: dashed;" src="../img/me.jpg" alt="" width="50%"> 
+        </div>
+    
+        <div class="info_me">
+           
+            <p>Привіт, тут трішки про мене</p>
+            <a href="#" target="_blank">Конструктор</a>
+        </div>
+    
+    </footer>
+
+</body>
+
+</html>
