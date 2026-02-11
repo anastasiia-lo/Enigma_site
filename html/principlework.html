@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Work principle</title>
+
+    <link rel="stylesheet" href="../css/principlework.css">  
+    <script type = "text/javascript" src="../js/introduction.js"> </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+   
+</head>
+
+<body vlink = "red" alink="yellow" leftmargin="0%">
+
+    <header class="introduction" >
+
+        <nav class="menu">
+
+            <div>
+
+               <img src="../img/logo.png" alt="Logo alo" width="50px" style="margin-left: 10px;">
+
+            </div>
+
+            <div class="navigation_on_site "> <!--Не використала клас-->
+
+                 <ul class="first_ul">
+                   <li class="first_li"><a class="first_a" href="../html/index.html">Enigma</a></li>
+                   <li class="first_li"><a class="first_a" href="../html/principlework.html">Принцип роботи Enigma</a></li>
+                   <li class="first_li"><a class="first_a" href="../html/cryptanalysis.html">Криптоаналіз</a></li>
+                </ul>
+
+            </div>
+
+        </nav>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <div class="navigation_on_foto" >
+
+            <div>
+
+               <h1 style="color: #fff; font-size: 70px;">Принцип роботи Enigma</h1>
+
+            </div>
+
+            <div class="navigation_by_site">
+
+                <ul> 
+                  <li class="two_li"><a class="two_a" href="#beginning">Який?</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+            
+    </header>
+    
+    <main>
+        
+        <div class="btn-up btn-up_hide"></div>
+
+        <script>
+            const btnUp = {
+              el: document.querySelector('.btn-up'),
+              show() {
+                this.el.classList.remove('btn-up_hide');
+              },
+              hide() {
+                this.el.classList.add('btn-up_hide');
+              },
+              addEventListener() {
+                window.addEventListener('scroll', () => {
+                  const scrollY = window.scrollY || document.documentElement.scrollTop;
+                  scrollY > 400 ? this.show() : this.hide();
+                });
+                document.querySelector('.btn-up').onclick = () => {
+                  window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                  });
+                }
+              }
+            }
+            btnUp.addEventListener();
+        </script>
+
+        <br>
+
+        <div  id="beginning">
+
+          <h2 style="text-align: center;">Детальне відео нижче:</h2>
+
+          <div style="text-align: center;">
+
+            <iframe 
+
+              width="560" height="315" src="https://www.youtube.com/embed/ybkkiGtJmkM?si=bT3XJ6N2VwgT_UgW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+            </iframe>
+
+          </div>
+          
+
+          
+        
+
+        </div>
+
+        
+
+
+    </main>
+
+    <br><br>
+
+    <footer class="footer_me">
+
+        <div class="info_me" >
+            <h3>Звяжись зі мною!</h3>
+            <a href="#">Instagram</a>
+            <br>
+            <a href="#">Facebook</a>
+            <br>
+            <a href="#">Telegram</a>
+        </div>
+
+        <div class="img_me">
+            <img style="border-color: #fff; border-style: dashed;" src="../img/me.jpg" alt="" width="50%"> 
+        </div>
+    
+        <div class="info_me">
+           
+            <p>Привіт, тут трішки про мене</p>
+            <a href="#" target="_blank">Конструктор</a>
+        </div>
+    
+    </footer>
+
+</body>
+
+</html>
